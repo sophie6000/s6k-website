@@ -1,0 +1,112 @@
+body {
+    background: -moz-linear-gradient(left, #6f6f6f 0%, #a7a7a7 100%);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.gold-border-main-wrapper {
+    z-index: -99;
+    position: relative; /* Wrapper ensures proper positioning for the pseudo-element */
+    max-width: 1250px;
+    margin: auto;
+}
+
+.gold-border-main {
+    background: radial-gradient(circle at 20% 66%, #0a0a0a 0%, #1d1d1d 100%);
+    padding: 50px;
+    color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr; /* Left column is 2 times larger than the right column */
+    gap: 20px; /* Adds space between columns */
+}
+
+
+.gold-border-main-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(-45deg, #ba9923, #ffedaa); /* Gold gradient border */
+    border-radius: 25px; /* Match the rounded corners of the card */
+    
+    padding: 5px; /* Create the border thickness */
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+
+.gold-border-card-wrapper {
+    width: 100%;
+    position: relative; /* Wrapper ensures proper positioning for the pseudo-element */
+    margin: 0;
+    height: 100%;
+}
+
+.gold-border-card {
+    background: radial-gradient(circle at 20% 66%, #1e3029 0%, #4A7B68 100%);
+    padding: 50px;  
+    color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    position: relative;
+    z-index: 2; /* Ensure card is above the pseudo-element */
+    transition: all 0.3s ease;
+    height: auto;
+    width: auto;
+}
+
+.gold-border-card-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, #ba9923, #ffedaa); /* Gold gradient border */
+    border-radius: 25px; /* Match the rounded corners of the card */
+    z-index: 1; /* Ensure it's behind the card */
+    box-sizing: border-box;
+    pointer-events: none; /* Prevent interactions */
+    margin: -2px;
+}
+
+.gold-border-card-wrapper:hover {
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    transform: translate(-2px, -5px); /* Slightly lift the card */
+}
+
+
+
+
+.gold-button {
+    background-color: #D3B55A; /* Gold background */
+    color: #000000; /* Black text */
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+}
+
+.gold-button:hover {
+    background-color: #FFE27A; /* Lighter gold on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
