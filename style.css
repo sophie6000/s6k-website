@@ -5,7 +5,19 @@
 }
 
 body {
-    background: -moz-linear-gradient(left, #6f6f6f 0%, #a7a7a7 100%);
+    --main-card-color1: #0b0b0b;
+    --main-card-color2: #202125;
+    --main-card-color3: #2a2a2a;
+
+    background: var(--main-card-color1);
+    background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
+    
     min-height: 100vh;
 }
 
@@ -25,15 +37,27 @@ h2 {
     position: relative;
     margin: auto;
     width: 1100px;
-        
+
     flex-grow: 1;
 }
 
 .gold-border-main {
-    background: radial-gradient(circle at 20% 66%, #0a0a0a 0%, #353535 100%);
+    --main-card-color1: #111111;
+    --main-card-color2: #323339;
+    --main-card-color3: #4f4f4f;
+
+    background: var(--main-card-color1);
+    background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
+    
     padding: 50px;
     color: #FFFFFF;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     height: auto;
     width: 100%;
@@ -75,13 +99,72 @@ h2 {
     width: 100%;
 }
 
+.flex-card-column__super-thin {
+    display: flex;
+    padding: 20px;
+    width: 10%;
+    height: 100%;
+    gap: 25px;
+    flex-direction: column;
+}
+
+.gold-border-item-wrapper {
+    position: relative;
+    margin: 0;
+    display: flex;
+    border-radius: 24px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.gold-border-item {
+    display: grid;
+    background: radial-gradient(circle at 20% 66%, #1e3029 0%, #4A7B68 100%);
+    padding: 50px;
+    border-radius: 24px;
+    position: relative;
+    z-index: 2;
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.gold-border-item-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, #ba9923, #ffedaa);
+    border-radius: 25px;
+    z-index: 1;
+    pointer-events: none;
+    margin: -2px;
+}
+
+
+#left-side-item-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+#left-side-item {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+}
+
+
 .flex-card-column {
     display: flex;
     padding: 20px;
     width: 100%;
     height: 100%;
     gap: 50px;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 #dual-card-container {
@@ -130,19 +213,66 @@ h2 {
     margin: -2px;
 }
 
+.gold-color-circle-wrapper-left {
+    display: flex;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.gold-color-circle-left {
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    border-radius: 50%;
+    background: radial-gradient(circle at 20% 66%, #305547 0%, #4A7B68 100%);
+    position: relative;
+}
+
+.gold-color-circle-wrapper-left::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    background: linear-gradient(-45deg, #ba9923, #ffedaa);
+    border-radius: 50%;
+    margin: -2px;
+}
+
 .gold-border-card-wrapper {
     width: 100%;
     position: relative;
     margin: 0;
     height: 260px;
     display: flex;
+    border-radius: 24px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 
 
 .gold-border-card {
     display: grid;
-    background: radial-gradient(circle at 20% 66%, #1e3029 0%, #4A7B68 100%);
+
+    --main-card-color1: #0f2118;
+    --main-card-color2: #245e4f;
+    --main-card-color3: #448961;
+
+    background: var(--main-card-color1);
+    background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
+    
+
     padding: 50px;
     border-radius: 24px;
     position: relative;
@@ -167,32 +297,24 @@ h2 {
     right: 0;
     bottom: 0;
     background: linear-gradient(-45deg, #ba9923, #ffedaa);
-    /* Gold gradient border */
     border-radius: 25px;
-    /* Match the rounded corners of the card */
     z-index: 1;
-    /* Ensure it's behind the card */
     pointer-events: none;
-    /* Prevent interactions */
     margin: -2px;
 }
 
 .gold-border-card-wrapper:hover {
     transition: all 0.3s ease;
     border-radius: 25px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 12px 24 px rgba(0, 0, 0, 0.5);
     transform: translate(-2px, -5px);
-    /* Slightly lift the card */
 }
 
 .gold-border-emblem-wrapper {
     width: 40px;
-    /* Size of the emblem */
     height: 40px;
     z-index: 3;
-
     transform: translate(-33%, -33%);
-    /* Centers the emblem at the top-left corner */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     position: absolute;
     border-radius: 50%;
@@ -222,8 +344,7 @@ h2 {
 
 .gold-button {
     background: linear-gradient(-45deg, #cda926, #e0c45e);
-    color: #000000;
-    /* Black text */
+    color: #4A7B68;
     border: none;
     border-radius: 20px;
     x: 10px 20px;
