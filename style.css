@@ -1,11 +1,11 @@
 @font-face {
     font-family: PoltawskiNowy-Italic;
-    src: url(/fonts/PoltawskiNowy-Italic-VariableFont_wght.ttf);
+    src: url(fonts/PoltawskiNowy-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: PoltawskiNowy;
-    src: url(/fonts/PoltawskiNowy-VariableFont_wght.ttf);
+    src: url(fonts/PoltawskiNowy-VariableFont_wght.ttf);
 }
 
 *,
@@ -47,21 +47,21 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 5px;
-    overflow: auto;
 }
 
 .navbar-link-item {
+    content: "";
     position: relative;
     display: grid;
     height: 100%;
     font-family: PoltawskiNowy;
     font-weight: 900;
-    font-size: 16pt;
+    font-size: 16   pt;
     justify-items: center;
     align-content: center;
     width: auto;
     padding: 5px;
-    
+
     --main-card-color1: #ba9923;
     --main-card-color2: #ffedaa;
     --main-card-color3: #9f8218;
@@ -74,11 +74,10 @@ h2 {
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
-
+    
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .gold-border-main-wrapper {
     top: 50px;
     display: flex;
