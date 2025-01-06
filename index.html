@@ -7,23 +7,43 @@
     <title>SOPHIE6000</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.png">
     <link rel='stylesheet' href='style.css'>
-</head> 
+</head>
 
 <body>
+    <div id="overlay"></div>
     <div class="gold-border-main-wrapper">
         <div class="gold-border-main">
             <div class="navbar-container">
-                <div class="navbar-link-item">
-                    HOME
-                </div>
-                <div class="navbar-link-item">
-                    ABOUT
-                </div>
-                <div class="navbar-link-item">
-                    PORTFOLIO
-                </div>
-                <div class="navbar-link-item">
-                    DOWNLOADS
+                <a href="index.html" id="navbar__logo">
+                    <object id="navbar__logoimg" alt="SOPHIE6000" data="assets/logo_full_fill_white.svg"
+                        type="image/svg+xml" width="115.96397" height="18.929594"></object>
+                </a>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <div class="navbar__item-main">
+                            <a href="index.html" class="navbar-link-item">Home</a>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <div class="navbar__item-main">
+                            <a href="index.html" class="navbar-link-item">Portfolio</a>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <div class="navbar__item-main">
+                            <a href="index.html" class="navbar-link-item">About</a>
+                        </div>
+                    </li>
+                    <li class="navbar__item">
+                        <div class="navbar__item-main">
+                            <a href="index.html" class="navbar-link-item">Downloads</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
             <div class="flex-card-container">
@@ -35,7 +55,7 @@
                     </div>
                     <div class="gold-color-circle-wrapper-left">
                         <div class="gold-color-circle-left"></div>
-                    
+
                     </div>
                     <div id="left-side-item-wrap" class="gold-border-item-wrapper">
                         <div id="left-side-item" class="gold-border-item">
@@ -45,6 +65,28 @@
                 </div>
                 <div class="flex-card-sub-container">
                     <div class="flex-card-column">
+                        <div class="gold-border-card-wrapper">
+                            <div class="gold-border-emblem-wrapper">
+                                <div class="gold-border-emblem"></div>
+                            </div>
+                            <div class="gold-border-card">
+                                <h2>About</h2>
+                                <p>This section highlights your creative graphic design work!</p>
+                                <button class="gold-button">Learn More</button>
+                            </div>
+                        </div>
+                        <div id="dual-card-container">
+                            <div class="dual-card">
+                                <div class="gold-color-circle-wrapper">
+                                    <div class="gold-color-circle"></div>
+                                </div>
+                            </div>
+                            <div class="dual-card">
+                                <div class="gold-color-circle-wrapper">
+                                    <div class="gold-color-circle" id="gold-color-circle-pink"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="gold-border-card-wrapper">
                             <div class="gold-border-emblem-wrapper">
                                 <div class="gold-border-emblem"></div>
@@ -83,11 +125,33 @@
                                 <button class="gold-button">Contact</button>
                             </div>
                         </div>
+                        <div class="gold-border-card-wrapper">
+                            <div class="gold-border-card">
+                                <h2>Contact</h2>
+                                <p>These are the ways to contact me!</p>
+                                <button class="gold-button">Contact</button>
+                            </div>
+                        </div>
+                        <div class="gold-border-card-wrapper">
+                            <div class="gold-border-card">
+                                <h2>Contact</h2>
+                                <p>These are the ways to contact me!</p>
+                                <button class="gold-button">Contact</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <svg style="width:0;height:0;position:absolute;bottom:0;" aria-hidden="true" focusable="false">
+        <linearGradient id="gold-gradient" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ba9923" />
+            <stop offset="50%" stop-color="#ffedaa" />
+            <stop offset="100%" stop-color="#9f8218" />
+        </linearGradient>
+    </svg>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>

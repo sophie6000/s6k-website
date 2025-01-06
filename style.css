@@ -12,6 +12,7 @@
 *::before {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -21,14 +22,18 @@ body {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
-    
     min-height: 100vh;
+    height: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px;
 }
 
 p {
@@ -49,6 +54,11 @@ h2 {
     gap: 5px;
 }
 
+.navbar__item {
+    height: 80px;
+    align-content: center;
+}
+
 .navbar-link-item {
     content: "";
     position: relative;
@@ -56,7 +66,7 @@ h2 {
     height: 100%;
     font-family: PoltawskiNowy;
     font-weight: 900;
-    font-size: 16   pt;
+    font-size: 16pt;
     justify-items: center;
     align-content: center;
     width: auto;
@@ -68,18 +78,79 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
-    
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+#navbar__logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 320px;
+}
+
+
+#navbar__logoimg {
+    display: block;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    z-index: 10;
+}
+
+.navbar-link-item:hover {
+    content: "";
+    position: relative;
+    display: grid;
+    height: 100%;
+    font-family: PoltawskiNowy;
+    font-weight: 900;
+    font-size: 16pt;
+    justify-items: center;
+    align-content: center;
+    width: auto;
+    padding: 5px;
+
+    --main-card-color1: #ccae40;
+    --main-card-color2: #f9edc0;
+    --main-card-color3: #bea23b;
+
+    background: var(--main-card-color1);
+    background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
+    background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .gold-border-main-wrapper {
-    top: 50px;
+    top: 15px;
     display: flex;
     position: relative;
     margin: auto;
@@ -96,13 +167,13 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
-    
+
     padding: 25px;
     color: #FFFFFF;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
@@ -112,6 +183,8 @@ h2 {
     flex-wrap: 1;
     position: relative;
     display: grid;
+    box-sizing: content-box;
+    gap: 24px;
 }
 
 
@@ -127,14 +200,14 @@ h2 {
     right: 0;
     bottom: 0;
     margin: -2px;
-    
+
     --main-card-color1: #ba9923;
     --main-card-color2: #ffedaa;
     --main-card-color3: #9f8218;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -195,7 +268,7 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -221,14 +294,14 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    
+
     --main-card-color1: #ba9923;
     --main-card-color2: #ffedaa;
     --main-card-color3: #9f8218;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -292,14 +365,14 @@ h2 {
     height: 100%;
     z-index: 5;
     border-radius: 50%;
-    
+
     --main-card-color1: #0f2118;
     --main-card-color2: #245e4f;
     --main-card-color3: #448961;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -317,14 +390,14 @@ h2 {
     right: 0;
     bottom: 0;
     z-index: 3;
-    
+
     --main-card-color1: #ba9923;
     --main-card-color2: #ffedaa;
     --main-card-color3: #9f8218;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -355,7 +428,7 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -372,14 +445,14 @@ h2 {
     right: 0;
     bottom: 0;
     z-index: 3;
-    
+
     --main-card-color1: #ba9923;
     --main-card-color2: #ffedaa;
     --main-card-color3: #9f8218;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -411,13 +484,13 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
-    
+
 
     padding: 50px;
     border-radius: 24px;
@@ -446,7 +519,7 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -487,7 +560,7 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -504,14 +577,14 @@ h2 {
     right: 0;
     bottom: 0;
     z-index: 3;
-    
+
     --main-card-color1: #ba9923;
     --main-card-color2: #ffedaa;
     --main-card-color3: #9f8218;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -523,14 +596,14 @@ h2 {
 }
 
 .gold-button {
-    
+
     --main-card-color1: #ba9923;
     --main-card-color2: #ffedaa;
     --main-card-color3: #9f8218;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -551,14 +624,14 @@ h2 {
 }
 
 .gold-button:hover {
-    
+
     --main-card-color1: #cbaa35;
     --main-card-color2: #fdefbe;
     --main-card-color3: #ba9a26;
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -575,7 +648,7 @@ h2 {
 
     background: var(--main-card-color1);
     background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)),  color-stop(100%, var(--main-card-color3)));
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
     background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
     background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
@@ -584,17 +657,213 @@ h2 {
 
 }
 
-
 @media only screen and (max-width: 920px) {
- .flex-card-sub-container {
-    flex-direction: column;
- }   
- .gold-border-main {
-    padding: 15px;
- }
- .flex-card-column__super-thin {
-    padding: 3px;
- }
+    .flex-card-sub-container {
+        flex-direction: column;
+    }
+
+    #dual-card-container {
+        height: auto;
+    }
+
+    .navbar__item {
+        top: 50px;
+        display: flex;
+        position: relative;
+        max-width: 84vw;
+        justify-content: center;
+        align-content: center;
+    
+        flex-grow: 1;
+    }
+    
+    .navbar__item-main {
+        --main-card-color1: #0f2118;
+        --main-card-color2: #245e4f;
+        --main-card-color3: #448961;
+    
+        background: var(--main-card-color1);
+        background: -moz-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
+        background: -webkit-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -o-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -ms-linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: linear-gradient(45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
+      
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        border-radius: 24px;
+        height: auto;
+        width: 100%;
+        flex-wrap: 1;
+        position: relative;
+        display: grid;
+    }
+    
+    
+    .navbar__item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: -2px;
+    
+        --main-card-color1: #ba9923;
+        --main-card-color2: #ffedaa;
+        --main-card-color3: #9f8218;
+    
+        background: var(--main-card-color1);
+        background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
+        background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
+        border-radius: 25px;
+        padding: 5px;
+        pointer-events: none;
+        box-shadow: 0px 12px 24px rgba(0, 0, 0, .6);
+    }
+
+    .dual-card {
+        height: auto;
+    }
+
+    .gold-border-main {
+        padding: 15px;
+    }
+
+    .flex-card-column__super-thin {
+        padding: 3px;
+    }
+
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 6;
+        width: 100%;
+        max-width: 1100px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 90%;
+        position: absolute;
+        opacity: 0;
+        top: 100px;
+        height: 50vh;
+        opacity: 0;
+    }
+    
+    .navbar__menu.active {
+        background-color: transparent;
+        top: 100px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 100;
+        height: 50vh;
+        font-size: 1.6rem;
+        gap: 10px;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+        width: 250px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+
+        --main-card-color1: #cbaa35;
+        --main-card-color2: #fdefbe;
+        --main-card-color3: #ba9a26;
+
+        background: var(--main-card-color1);
+        background: -moz-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, var(--main-card-color1)), color-stop(50%, var(--main-card-color2)), color-stop(100%, var(--main-card-color3)));
+        background: -webkit-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -o-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: -ms-linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        background: linear-gradient(-45deg, var(--main-card-color1) 0%, var(--main-card-color2) 50%, var(--main-card-color3) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=var(--main-card-color1), endColorstr=var(--main-card-color3), GradientType=1);
+
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, .6);
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        align-self: center;
+    }
+
+    .navbar__toggle {
+        position: absolute;
+        right: 50px;
+        cursor: pointer;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+    }
+
+    #overlay {
+        z-index: 99;
+        background-color: rgba(0,0,0,1);
+        opacity: 0;
+        position: fixed;
+        left:0;
+        top: 0;
+        width:100vw;
+        height:110vh;
+        pointer-events: none;
+    }
+
+    #overlay.is-active {
+        opacity: .46;
+    }
+
+    #mobile-menu {
+        z-index: 109;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
-/* #FF85AF -- A COOL PINK */
+a {text-decoration: none;} /* Globally */
+
+/* Each state */
+
+a:visited { text-decoration: none;}
+a:hover { text-decoration: none;}
+a:focus { text-decoration: none;}
+a:hover, a:active { text-decoration: none;}
+
