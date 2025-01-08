@@ -423,7 +423,6 @@ h2 {
 
 .gold-border-card {
     display: grid;
-
     --main-card-color1: #0f2118;
     --main-card-color2: #245e4f;
     --main-card-color3: #448961;
@@ -576,18 +575,24 @@ h2 {
     margin: 0;
     height: 260px;
     display: flex;
-
     border-radius: 24px;
-    border: 2px solid transparent;
-
-    mask:
-    linear-gradient(#000 0 0) padding-box, 
-    linear-gradient(#000 0 0);
-    mask-composite: exclude;
-
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+    background: transparent;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+.gold-border-empty::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px; 
+    border: 2px solid transparent;
+    mask: 
+      linear-gradient(#000 0 0) padding-box, 
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    background-origin: border-box;
+
+}
 
 
 @media only screen and (max-width: 920px) {
@@ -768,18 +773,19 @@ h2 {
 
     #overlay {
         z-index: 99;
-        background-color: rgba(0,0,0,1);
-        opacity: 0;
+        background-color: rgba(0, 0, 0, 0);
         position: fixed;
         left:0;
         top: 0;
         width:100vw;
         height:110vh;
         pointer-events: none;
+        backdrop-filter: none;
     }
 
     #overlay.is-active {
-        opacity: .46;
+        background-color: rgba(0, 0, 0, 0.46);
+        backdrop-filter: blur(15px);
     }
 
     #mobile-menu {
